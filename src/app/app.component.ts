@@ -6,6 +6,7 @@ import { ComponenteInlineComponent } from './componente-inline/componente-inline
 
 import { PadreComponent } from './padre/padre.component';
 import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.component';
+import { ReplicadorComponent } from "./replicador/replicador.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.compo
    NuevoComponenteComponent,
    ComponenteInlineComponent,
    PadreComponent,
-   MostrarMensajeComponent
+   MostrarMensajeComponent,
+   ReplicadorComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
