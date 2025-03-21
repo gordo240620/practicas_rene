@@ -5,17 +5,20 @@ import { NuevoComponenteComponent } from './nuevo-componente/nuevo-componente.co
 import { ComponenteInlineComponent } from './componente-inline/componente-inline.component';
 
 import { PadreComponent } from './padre/padre.component';
+import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.component';
 
 @Component({
   selector: 'app-root',
   imports: [
+   RouterOutlet,
    NuevoComponenteComponent,
    ComponenteInlineComponent,
    PadreComponent,
+   MostrarMensajeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'practicas';
+  titulo = 'Event Binding en Angular';
 }
