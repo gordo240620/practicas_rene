@@ -10,5 +10,5 @@ import { HijoComponent } from './hijo/hijo.component';
   styleUrl: './padre.component.css'
 })
 export class PadreComponent {
-
+  mensajePadre: string = 'Hola desde el componente Padre';
 }

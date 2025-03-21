@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { PadreComponent } from '../padre.component';
+
 
 @Component({
   selector: 'app-hijo',
@@ -8,14 +9,10 @@ import { PadreComponent } from '../padre.component';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-  private titulo = 'Titulo Componente Hijo';
-  // Se usa en la plantilla como si fuera una propiedad mas
-  get mostrarTitulo(){
-  return this.titulo;
-  }
-  // Se usa en la plantilla como un método (uso de paréntesis)
-  getTitulo(){
-  return this.titulo;
-  }
+   // !:operador non-null assertion operator en TypeScript.
+  // confíe en que esta propiedad será inicializada
+  // Se inicializa desde el componente Padre
+  @Input() mensaje!: string;
+
   
 }
