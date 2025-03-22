@@ -9,10 +9,8 @@ import { PadreComponent } from '../padre.component';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-  @Output() notificarPadre = new EventEmitter<string>();
-
-   enviarMensaje() {
-   // Emitir el evento con un mensaje (se emite un str)
-   this.notificarPadre.emit('Mensaje desde el Componente Hijo al Padre');
+  mensaje: string = 'Mensaje desde el componente hijo';
+  cambiarMensaje(nuevoMensaje: string) {
+  this.mensaje = nuevoMensaje;
   }
 }
