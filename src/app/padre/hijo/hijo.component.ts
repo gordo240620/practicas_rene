@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 import { PadreComponent } from '../padre.component';
 
 
@@ -9,10 +9,10 @@ import { PadreComponent } from '../padre.component';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
-   // !:operador non-null assertion operator en TypeScript.
-  // confíe en que esta propiedad será inicializada
-  // Se inicializa desde el componente Padre
-  @Input() mensaje!: string;
+  @Output() notificarPadre = new EventEmitter<string>();
 
-  
+   enviarMensaje() {
+   // Emitir el evento con un mensaje (se emite un str)
+   this.notificarPadre.emit('Mensaje desde el Componente Hijo al Padre');
+  }
 }
